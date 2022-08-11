@@ -3,14 +3,36 @@ import styled, { css } from 'styled-components';
 export const SummaryContainer = styled.section`
   width: 100%;
   max-width: 1120px;
+  overflow-x: auto;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0.5rem 1.5rem;
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 
   margin-top: -5rem;
+
+  /* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: ${props => props.theme['gray-900']};
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: ${props => props.theme['green-500']};
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 `
 
 interface SummaryCardProps {

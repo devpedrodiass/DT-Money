@@ -11,16 +11,23 @@ export const Overlay = styled(Dialog.Overlay)`
 `
 
 export const Content = styled(Dialog.Content)`
-  min-width: 32rem;
   border-radius: 6px;
   padding: 2.5rem 3rem;
   background: ${props => props.theme['gray-800']};
-
+  
   position: fixed;
-  top: 50%;
-  left: 50%;
-
-  transform: translate(-50%, -50%);
+  
+  @media (min-width: 520px) {
+    min-width: 32rem;
+    top: 50%;
+    left: 50%;
+  
+    transform: translate(-50%, -50%);
+  }
+  @media (max-width: 520px) {
+    width: 100%;
+    bottom: 0;
+  }
 
   form {
     margin-top: 2rem;
@@ -55,7 +62,12 @@ export const Content = styled(Dialog.Content)`
 
       transition: all 0.2s;
       
-      &:hover {
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+      
+      &:not(:disabled):hover {
         background: ${props => props.theme['green-700']};
       }
     }
@@ -78,6 +90,9 @@ export const TransactionType = styled(RadioGroup.Root)`
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   margin-top: 0.5rem;
+  @media (max-width: 340px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `
 
 interface TransactionTypeButtonProps {

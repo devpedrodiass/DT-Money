@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 
 export const SearchFormContainer = styled.form`
@@ -19,10 +19,16 @@ export const SearchFormContainer = styled.form`
 
   }
 
-  button {
+  @media (max-width: 600px) {
+    flex-direction: column;
+}
+`
+
+export const SearchButton = styled.button`
     display: flex;
     align-items: center;
     gap: 0.75rem;
+    
 
     border: 0;
     padding: 1rem;
@@ -40,10 +46,19 @@ export const SearchFormContainer = styled.form`
 
       cursor: pointer;
 
-    &:hover {
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+
+    &:not(:disabled):hover {
       background: ${props => props.theme["green-500"]};
       border-color: ${props => props.theme["green-500"]};
       color: ${props => props.theme["white"]};
-    }
   }
-`
+
+    @media (max-width: 600px) {
+      justify-content: center;
+    }
+
+  `

@@ -1,0 +1,52 @@
+{
+  "transactions": [
+    {
+      "id": 1,
+      "description": "Site Development",
+      "type": "income",
+      "category": "Tech",
+      "price": 14000,
+      "createdAt": "2022-08-11T12:02:21.084Z"
+    },
+    {
+      "id": 2,
+      "description": "Food",
+      "type": "outcome",
+      "category": "Food",
+      "price": 13,
+      "createdAt": "2022-08-11T12:40:21.084Z"
+    },
+    {
+      "id": 3,
+      "description": "Course ReactJS",
+      "type": "outcome",
+      "category": "Education",
+      "price": 69,
+      "createdAt": "2022-08-05T12:40:21.084Z"
+    },
+    {
+      "id": 4,
+      "description": "Course NextJS",
+      "type": "outcome",
+      "category": "Education",
+      "price": 39,
+      "createdAt": "2022-08-11T12:40:21.084Z"
+    },
+    {
+      "id": 5,
+      "description": "Salary of August",
+      "type": "income",
+      "category": "Salary",
+      "price": 2000,
+      "createdAt": "2022-08-11T12:40:21.084Z"
+    },
+    {
+      "category": "Tech",
+      "description": "Tablet",
+      "price": 120,
+      "type": "outcome",
+      "createdAt": "2022-08-11T16:46:15.093Z",
+      "id": 6
+    }
+  ]
+}
